@@ -1,0 +1,101 @@
+/* JobSeekerProfile Styles */
+
+:root {
+  --primary-color: #4a90e2;
+  --secondary-color: #50e3c2;
+  --text-color: #333;
+  --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.job-seeker-profile {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--card-shadow);
+}
+
+.sidebar nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  padding: 0.5rem 0;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.sidebar nav ul li:hover {
+  background-color: var(--secondary-color);
+}
+
+.main-content {
+  flex: 1;
+  padding: 1rem;
+}
+
+.statistics {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--card-shadow);
+  text-align: center;
+}
+
+.candidate-tracker {
+  margin-top: 2rem;
+}
+
+.candidate-tracker table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.candidate-tracker th, .candidate-tracker td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.status.shortlisted {
+  color: green;
+}
+
+.status.rejected {
+  color: red;
+}
+
+.status.tested {
+  color: orange;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .job-seeker-profile {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .statistics {
+    flex-direction: column;
+  }
+}
